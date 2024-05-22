@@ -100,7 +100,7 @@ const Index = () => {
 
 const Footer = () => {
   return (
-    <Box as="footer" bg="blue.500" color="white" py={4} mt={8}>
+    <Box as="footer" bg="blue.700" color="white" py={4} mt={8}>
       <Container maxW="container.xl">
         <Flex direction={{ base: "column", md: "row" }} align="center" justify="space-between">
           <Box textAlign={{ base: "center", md: "left" }} mb={{ base: 4, md: 0 }}>
