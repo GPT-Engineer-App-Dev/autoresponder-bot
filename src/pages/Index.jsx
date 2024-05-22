@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Box, Heading, Flex, Spacer, Button, IconButton } from "@chakra-ui/react";
+import { FaWhatsapp, FaRobot, FaCog, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp, FaRobot, FaCog } from "react-icons/fa";
 
 const Index = () => {
@@ -93,6 +94,18 @@ const Index = () => {
           <Text mt={4}>Communicate in Malay and 50 other supported languages.</Text>
         </Box>
       </VStack>
+      <Box as="footer" bg="blue.500" color="white" py={4} mt={10}>
+        <VStack spacing={4}>
+          <Text>Contact us: contact@example.com</Text>
+          <Flex>
+            <IconButton as="a" href="https://facebook.com" aria-label="Facebook" icon={<FaFacebook />} variant="ghost" colorScheme="whiteAlpha" />
+            <IconButton as="a" href="https://twitter.com" aria-label="Twitter" icon={<FaTwitter />} variant="ghost" colorScheme="whiteAlpha" />
+            <IconButton as="a" href="https://instagram.com" aria-label="Instagram" icon={<FaInstagram />} variant="ghost" colorScheme="whiteAlpha" />
+            <IconButton as="a" href="https://linkedin.com" aria-label="LinkedIn" icon={<FaLinkedin />} variant="ghost" colorScheme="whiteAlpha" />
+          </Flex>
+          <Text fontSize="sm">© {new Date().getFullYear()} AutoResponder. All rights reserved.</Text>
+        </VStack>
+      </Box>
     </Container>
   );
 };
