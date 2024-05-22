@@ -4,7 +4,7 @@ import { FaWhatsapp, FaRobot, FaCog, FaFacebook, FaTwitter, FaInstagram, FaLinke
 const Index = () => {
   return (
     <Container maxW="container.xl" p={4}>
-      <Flex as="nav" bg="red.500" color="white" p={4} borderRadius="md" mb={6}>
+      <Flex as="nav" bg="purple.500" color="white" p={4} borderRadius="md" mb={6}>
         <Heading size="md">AutoResponder</Heading>
         <Spacer />
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaWhatsapp />}>WhatsApp</Button>
@@ -100,7 +100,7 @@ const Index = () => {
 
 const Footer = () => {
   return (
-    <Box as="footer" bg="blue.500" color="white" py={4} mt={8}>
+    <Box as="footer" bg="green.500" color="white" py={4} mt={8}>
       <Container maxW="container.xl">
         <Flex direction={{ base: "column", md: "row" }} align="center" justify="space-between">
           <Box textAlign={{ base: "center", md: "left" }} mb={{ base: 4, md: 0 }}>
