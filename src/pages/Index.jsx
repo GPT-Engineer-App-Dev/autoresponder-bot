@@ -4,7 +4,7 @@ import { FaWhatsapp, FaRobot, FaCog, FaFacebook, FaTwitter, FaInstagram, FaLinke
 const Index = () => {
   return (
     <Container maxW="container.xl" p={4}>
-      <Flex as="nav" bg="blue.500" color="white" p={4} borderRadius="md" mb={6}>
+      <Flex as="nav" bg="red.500" color="white" p={4} borderRadius="md" mb={6}>
         <Heading size="md">AutoResponder</Heading>
         <Spacer />
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaWhatsapp />}>WhatsApp</Button>
