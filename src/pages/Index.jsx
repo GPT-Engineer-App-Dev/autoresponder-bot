@@ -1,4 +1,4 @@
-import { Container, Text, VStack, Box, Heading, Flex, Spacer, Button, IconButton } from "@chakra-ui/react";
+import { Container, Text, VStack, Box, Heading, Flex, Spacer, Button, IconButton, Image } from "@chakra-ui/react";
 import { FaWhatsapp, FaRobot, FaCog } from "react-icons/fa";
 
 const Index = () => {
@@ -11,6 +11,9 @@ const Index = () => {
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaRobot />}>AI Integration</Button>
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaCog />}>Settings</Button>
       </Flex>
+      <Box mb={6}>
+        <Image src="/images/whatsapp_autoresponder.jpg" alt="WhatsApp Autoresponder" borderRadius="md" width="100%" height="auto" />
+      </Box>
       <VStack spacing={8} align="stretch">
         <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
           <Heading fontSize="xl">Auto-reply to WhatsApp or WA Business</Heading>
