@@ -1,5 +1,5 @@
 import { Container, Text, VStack, Box, Heading, Flex, Spacer, Button, IconButton } from "@chakra-ui/react";
-import { FaWhatsapp, FaRobot, FaCog } from "react-icons/fa";
+import { FaWhatsapp, FaRobot, FaCog, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -93,7 +93,36 @@ const Index = () => {
           <Text mt={4}>Communicate in Malay and 50 other supported languages.</Text>
         </Box>
       </VStack>
+      <Footer />
     </Container>
+  );
+};
+
+const Footer = () => {
+  return (
+    <Box as="footer" bg="blue.500" color="white" py={4} mt={8}>
+      <Container maxW="container.xl">
+        <Flex direction={{ base: "column", md: "row" }} align="center" justify="space-between">
+          <Box textAlign={{ base: "center", md: "left" }} mb={{ base: 4, md: 0 }}>
+            <Text fontSize="lg" fontWeight="bold">Contact Us</Text>
+            <Text>Email: contact@autoresponder.com</Text>
+            <Text>Phone: +123 456 7890</Text>
+          </Box>
+          <Box textAlign={{ base: "center", md: "left" }} mb={{ base: 4, md: 0 }}>
+            <Text fontSize="lg" fontWeight="bold">Follow Us</Text>
+            <Flex justify={{ base: "center", md: "flex-start" }} mt={2}>
+              <IconButton as="a" href="https://facebook.com" aria-label="Facebook" icon={<FaFacebook />} variant="ghost" colorScheme="whiteAlpha" mx={1} />
+              <IconButton as="a" href="https://twitter.com" aria-label="Twitter" icon={<FaTwitter />} variant="ghost" colorScheme="whiteAlpha" mx={1} />
+              <IconButton as="a" href="https://instagram.com" aria-label="Instagram" icon={<FaInstagram />} variant="ghost" colorScheme="whiteAlpha" mx={1} />
+              <IconButton as="a" href="https://linkedin.com" aria-label="LinkedIn" icon={<FaLinkedin />} variant="ghost" colorScheme="whiteAlpha" mx={1} />
+            </Flex>
+          </Box>
+          <Box textAlign={{ base: "center", md: "right" }}>
+            <Text>&copy; {new Date().getFullYear()} AutoResponder. All rights reserved.</Text>
+          </Box>
+        </Flex>
+      </Container>
+    </Box>
   );
 };
 
