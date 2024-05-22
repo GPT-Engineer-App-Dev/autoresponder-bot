@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Box, Heading, Flex, Spacer, Button, IconButton } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FaWhatsapp, FaRobot, FaCog, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Index = () => {
@@ -10,6 +11,7 @@ const Index = () => {
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaWhatsapp />}>WhatsApp</Button>
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaRobot />}>AI Integration</Button>
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaCog />}>Settings</Button>
+        <Button as={Link} to="/tic-tac-toe" variant="ghost" colorScheme="whiteAlpha">Tic Tac Toe</Button>
       </Flex>
       <VStack spacing={8} align="stretch">
         <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
