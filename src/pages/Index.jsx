@@ -1,5 +1,6 @@
 import { Container, Text, VStack, Box, Heading, Flex, Spacer, Button, IconButton } from "@chakra-ui/react";
 import { FaWhatsapp, FaRobot, FaCog, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -93,6 +94,11 @@ const Index = () => {
           <Text mt={4}>Communicate in Malay and 50 other supported languages.</Text>
         </Box>
       </VStack>
+      <Box textAlign="center" mt={8}>
+        <Link to="/tic-tac-toe">
+          <Button colorScheme="teal" size="lg">Play Tic Tac Toe</Button>
+        </Link>
+      </Box>
       <Footer />
     </Container>
   );
