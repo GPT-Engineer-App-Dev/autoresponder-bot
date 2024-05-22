@@ -1,7 +1,12 @@
-import { Container, Text, VStack, Box, Heading, Flex, Spacer, Button, IconButton } from "@chakra-ui/react";
+import { Container, Text, VStack, Box, Heading, Flex, Spacer, Button, IconButton, useState, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Input, FormControl, FormLabel } from "@chakra-ui/react";
 import { FaWhatsapp, FaRobot, FaCog } from "react-icons/fa";
 
 const Index = () => {
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+  const openSettings = () => setIsSettingsOpen(true);
+  const closeSettings = () => setIsSettingsOpen(false);
+
   return (
     <Container maxW="container.xl" p={4}>
       <Flex as="nav" bg="blue.500" color="white" p={4} borderRadius="md" mb={6}>
@@ -9,7 +14,7 @@ const Index = () => {
         <Spacer />
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaWhatsapp />}>WhatsApp</Button>
         <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaRobot />}>AI Integration</Button>
-        <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaCog />}>Settings</Button>
+        <Button variant="ghost" colorScheme="whiteAlpha" leftIcon={<FaCog />} onClick={openSettings}>Settings</Button>
       </Flex>
       <VStack spacing={8} align="stretch">
         <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
@@ -93,6 +98,29 @@ const Index = () => {
           <Text mt={4}>Communicate in Malay and 50 other supported languages.</Text>
         </Box>
       </VStack>
+    <Modal isOpen={isSettingsOpen} onClose={closeSettings}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Settings</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <FormControl>
+              <FormLabel>Auto-reply Message</FormLabel>
+              <Input placeholder="Enter your auto-reply message" />
+            </FormControl>
+            <FormControl mt={4}>
+              <FormLabel>Response Delay (seconds)</FormLabel>
+              <Input type="number" placeholder="Enter delay in seconds" />
+            </FormControl>
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={closeSettings}>
+              Save
+            </Button>
+            <Button variant="ghost" onClick={closeSettings}>Cancel</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Container>
   );
 };
